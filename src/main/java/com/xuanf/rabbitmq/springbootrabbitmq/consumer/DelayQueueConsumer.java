@@ -21,6 +21,5 @@ public class DelayQueueConsumer {
     public void receiveDelayQueue(Message message) {
         String msg = new String(message.getBody());
         log.info("当前时间：{}，收到延迟队列的消息：{}",new Date().toString(), new String(message.getBody()));
-
     }
 }
