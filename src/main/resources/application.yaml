@@ -4,3 +4,7 @@ spring:
     port: 5672
     username: guest
     password: guest
+    # 开启交换机确认回调
+    publisher-confirm-type: correlated
+    # 交换机消息路由不出去，回退给生产者
+    publisher-returns: true
