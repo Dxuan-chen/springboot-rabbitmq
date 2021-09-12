@@ -46,10 +46,10 @@ public class DelayedQueueConfig {
     //绑定
     @Bean
     public Binding delayedQueueBindingdelayedExchange(
-            @Qualifier("delayedQueue") Queue queue,
+            @Qualifier("delayedQueue") Queue delayedQueue,
             @Qualifier("delayedExchange") Exchange delayedExchange) {
 
-        return BindingBuilder.bind(delayedQueue())
+        return BindingBuilder.bind(delayedQueue)
                 .to(delayedExchange)
                 .with(DELAYED_ROUTING_KEY)
                 .noargs();
